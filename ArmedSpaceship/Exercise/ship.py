@@ -1,4 +1,8 @@
+"""
+将图片绘制到屏幕中央，并更改图片背景颜色
+"""
 import pygame
+
 
 class Ship():
     def __init__(self, screen):
