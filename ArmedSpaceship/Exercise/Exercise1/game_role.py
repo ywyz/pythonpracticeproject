@@ -1,6 +1,4 @@
-"""
-将图片绘制到屏幕中央，并更改图片背景颜色
-"""
+
 import pygame
 import sys
 from ship import Ship
