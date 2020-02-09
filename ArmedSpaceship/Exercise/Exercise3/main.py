@@ -19,4 +19,5 @@ def run_ship():
         gf.update_screen(sets, screen, ship)
         screen.fill(sets.bg_color)
 
+
 run_ship()
