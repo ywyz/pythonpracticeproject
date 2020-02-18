@@ -7,7 +7,7 @@ class Bullet(Sprite):
 
     def __init__(self, ai_settings, screen, ship):
         """在飞船所处的位置上创建一个子弹对象"""
-        super().init()
+        super().__init__()
         self.screen = screen
 
         # 在(0, 0)处创建一个表示子弹的矩形，再设置正确的位置
@@ -26,4 +26,9 @@ class Bullet(Sprite):
         """向上移动子弹"""
         # 更新表示子弹的小数值
         self.y -= self.speed_factor
-        # 更新表示子弹的
+        # 更新表示子弹的rect的位置
+        self.rect.y = self.y
+
+    def draw_bullet(self):
+        """在屏幕上绘制子弹"""
+        pygame.draw.rect(self.screen, self.color, self.rect)
