@@ -19,11 +19,7 @@ def main():
 
         gf.check_events()
 
-        # 填充颜色
-        screen.fill(exercise_settings.bg_color)
-        ship.blitme()
-        # 显示屏幕
-        pygame.display.flip()
+        gf.update_screen(screen, ship, exercise_settings)
 
 
 main()
