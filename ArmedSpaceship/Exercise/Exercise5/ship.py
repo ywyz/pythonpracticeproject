@@ -15,7 +15,16 @@ class Ship():
         # 将新飞船放在屏幕右侧中央
         self.rect.centerx = self.screen_rect.right
         self.rect.bottom = self.screen_rect.centery
+        self.move_up = False
+        self.move_down = False
 
     def blitme(self):
         """在指定位置绘制飞船"""
         self.screen.blit(self.image, self.rect)
+
+    def update(self):
+        if self.move_up:
+            self.rect.bottom -= 1
+
+        if self.move_down:
+            self.rect.bottom += 1

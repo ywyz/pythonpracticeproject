@@ -17,8 +17,7 @@ def main():
 
     while True:
 
-        gf.check_events()
-
+        gf.check_events(ship)
         gf.update_screen(screen, ship, exercise_settings)
 
 
